@@ -1,83 +1,70 @@
-# 🔗 URL Shortener — Frontend
+# Getting Started with Create React App
 
-A modern, animated URL shortener frontend built with **React.js** and **React Bits** components. Integrated with a Spring Boot REST API backend.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-🔗 **Live Demo:** _Coming soon_
-💻 **Backend Repo:** [url-shortener-backend](https://github.com/yug008/url-shortener-backend)
+## Available Scripts
 
----
+In the project directory, you can run:
 
-## ✨ Features
+### `npm start`
 
-- 🔗 **URL Shortening** — Paste a long URL and get a short one instantly
-- 📋 **Copy to Clipboard** — One click to copy the shortened URL
-- 📊 **Click Tracking** — Backend tracks how many times each link is clicked
-- 🎨 **Animated UI** — Smooth animations using React Bits components
-- 🌌 **Dynamic Background** — Animated DarkVeil WebGL background
-- ⚡ **Instant Feedback** — Loading states and error handling
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
----
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## 🛠️ Tech Stack
+### `npm test`
 
-- React.js
-- React Bits (SpotlightCard, Magnet, GradientText, DarkVeil)
-- Framer Motion
-- OGL (WebGL)
-- Deployed on **Vercel**
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
----
+### `npm run build`
 
-## 📁 Project Structure
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-```
-src/
-├── components/
-│   ├── DarkVeil.js       # Animated WebGL background
-│   ├── GradientText.js   # Animated gradient title
-│   ├── Magnet.js         # Magnetic hover effect for button
-│   └── SpotlightCard.js  # Spotlight hover card
-├── App.js                # Main app component
-└── index.js              # Entry point
-```
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
----
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## ⚙️ Getting Started Locally
+### `npm run eject`
 
-### Prerequisites
-- Node.js
-- Backend running on `http://localhost:8080`
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-### Setup
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-1. Clone the repo:
-```bash
-git clone https://github.com/yug008/url-shortener-frontend.git
-cd url-shortener-frontend
-```
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-2. Install dependencies:
-```bash
-npm install
-```
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-3. Start the app:
-```bash
-npm start
-```
+## Learn More
 
-App runs on `http://localhost:3000`
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
----
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-## 🌍 Deployment
+### Code Splitting
 
-Frontend deployed on **Vercel**. Backend deployed on **Railway**.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
----
+### Analyzing the Bundle Size
 
-## 📬 Contact
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-**Yug Mehta**
-- GitHub: [@yug008](https://github.com/yug008)
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
