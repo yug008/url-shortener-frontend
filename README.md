@@ -2,7 +2,7 @@
 
 A modern, animated URL shortener frontend built with **React.js** and **React Bits** components. Integrated with a Spring Boot REST API backend.
 
-🔗 **Live Demo:** _Coming soon_
+🔗 **Live Demo:** https://url-shortener-frontend-tau-nine.vercel.app
 💻 **Backend Repo:** [url-shortener-backend](https://github.com/yug008/url-shortener-backend)
 
 ---
