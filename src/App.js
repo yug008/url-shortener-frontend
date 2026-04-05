@@ -3,7 +3,7 @@ import DarkVeil from './components/DarkVeil';
 import Magnet from './components/Magnet';
 import GradientText from './components/GradientText';
 
-const BACKEND_URL = 'url-shortener-backend-production-5721.up.railway.app';
+const BACKEND_URL = 'https://url-shortener-backend-production-5721.up.railway.app';
 
 export default function App() {
   const [originalUrl, setOriginalUrl] = useState('');
