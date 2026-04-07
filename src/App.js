@@ -2,15 +2,31 @@ import { useState } from 'react';
 import DarkVeil from './components/DarkVeil';
 import Magnet from './components/Magnet';
 import GradientText from './components/GradientText';
+import Auth from './Auth';
 
 const BACKEND_URL = 'https://url-shortener-backend-production-5721.up.railway.app';
 
 export default function App() {
+  const [token, setToken] = useState(localStorage.getItem('token') || '');
+  const [username, setUsername] = useState(localStorage.getItem('username') || '');
   const [originalUrl, setOriginalUrl] = useState('');
   const [shortUrl, setShortUrl] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
+
+  const handleLogin = (username, token) => {
+    setUsername(username);
+    setToken(token);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('username');
+    setToken('');
+    setUsername('');
+    setShortUrl('');
+  };
 
   const handleShorten = async () => {
     if (!originalUrl.trim()) return;
@@ -20,7 +36,10 @@ export default function App() {
     try {
       const response = await fetch(`${BACKEND_URL}/api/shorten`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
         body: JSON.stringify({ originalUrl }),
       });
       if (!response.ok) throw new Error('Failed to shorten URL');
@@ -38,6 +57,10 @@ export default function App() {
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
+
+  if (!token) {
+    return <Auth onLogin={handleLogin} />;
+  }
 
   return (
     <div style={styles.page}>
@@ -63,6 +86,10 @@ export default function App() {
           URL Shortener
         </GradientText>
         <div style={styles.card}>
+          <div style={styles.header}>
+            <p style={styles.welcome}>👋 Hey, <strong style={{color: '#bf5fff'}}>{username}</strong></p>
+            <button style={styles.logoutBtn} onClick={handleLogout}>Logout</button>
+          </div>
           <p style={styles.subtitle}>Paste your long URL and get a short one instantly</p>
           <div style={styles.inputRow}>
             <input
@@ -133,6 +160,26 @@ const styles = {
     border: '1px solid #222',
     padding: '2rem',
   },
+  header: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: '8px',
+  },
+  welcome: {
+    color: '#aaa',
+    fontSize: '14px',
+    margin: 0,
+  },
+  logoutBtn: {
+    padding: '6px 14px',
+    background: 'transparent',
+    color: '#ff4444',
+    border: '1px solid #ff4444',
+    borderRadius: '6px',
+    cursor: 'pointer',
+    fontSize: '12px',
+  },
   subtitle: {
     color: '#aaa',
     marginBottom: '1.5rem',
@@ -185,7 +232,7 @@ const styles = {
     wordBreak: 'break-all',
     minWidth: 0,
   },
- copyBtn: {
+  copyBtn: {
     padding: '6px 14px',
     background: 'linear-gradient(to right, #bf5fff, #ff6edf)',
     color: '#fff',
@@ -195,5 +242,5 @@ const styles = {
     fontSize: '12px',
     whiteSpace: 'nowrap',
     fontWeight: 'bold',
-},
+  },
 };
