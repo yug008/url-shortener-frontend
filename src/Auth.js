@@ -2,7 +2,7 @@ import { useState } from 'react';
 import DarkVeil from './components/DarkVeil';
 import GradientText from './components/GradientText';
 
-const BACKEND_URL = 'https://url-shortener-backend-production-5721.up.railway.app';
+const BACKEND_URL = 'https://url-shortener-backend-l5wm.onrender.com';
 
 export default function Auth({ onLogin }) {
   const [isLogin, setIsLogin] = useState(true);

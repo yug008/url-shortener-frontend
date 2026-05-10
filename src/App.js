@@ -4,7 +4,7 @@ import Magnet from './components/Magnet';
 import GradientText from './components/GradientText';
 import Auth from './Auth';
 
-const BACKEND_URL = 'https://url-shortener-backend-production-5721.up.railway.app';
+const BACKEND_URL = 'https://url-shortener-backend-l5wm.onrender.com';
 
 export default function App() {
   const [token, setToken] = useState(localStorage.getItem('token') || '');
