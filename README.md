@@ -4,6 +4,7 @@ A modern, animated URL shortener frontend built with **React.js** and **React Bi
 
 🔗 **Live Demo:** https://url-shortener-frontend-tau-nine.vercel.app
 💻 **Backend Repo:** [url-shortener-backend](https://github.com/yug008/url-shortener-backend)
+💻 **Frontend Repo:** [url-shortener-frontend](https://github.com/yug008/url-shortener-frontend)
 
 ---
 
