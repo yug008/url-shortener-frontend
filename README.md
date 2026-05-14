@@ -76,7 +76,7 @@ App runs on `http://localhost:3000`
 
 ## 🌍 Deployment
 
-Frontend deployed on **Vercel**. Backend deployed on **Railway**.
+Frontend deployed on **Vercel**. Backend deployed on **Render**.
 
 ---
 
